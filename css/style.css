@@ -15,6 +15,7 @@
 
 body {
     background-color: #F5F5F5;
+
 }
 
 /* #4 # sweat #uppercase buttons and w3w locations */
@@ -30,17 +31,48 @@ button, strong {
 h1 {
     background-color: #3F51B5;
     color: white;
+    padding: 0 16px 0 16px;
+    font-size: 20px;
+    height: 56px;
+    font-weight: normal;
 }
 
+h1 img {
+    vertical-align: middle;
+}
+
+#chatter-bar {
+    position: fixed;
+    width: 40%;
+}
 
 /* CHANNELS LIST */
 
+#channels {
+    width: 40%;
+    height: 100%;
+    left: 0px;
+    float: left;
+    
+    background-color: white;
+    margin: auto;
+    position: absolute;
+    overflow-y: auto;
+    
+}
+
 /* #4 #sweat #channels */
+#content{
+    padding-top: 56px;
+    padding-bottom: 72px;
+}
+
 ul {
     /* #3 #channels #list modifies h2 to ul */
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    height: auto;
 }
 
 li {
@@ -51,6 +83,8 @@ li {
     font-size: 16px;
     /* #4 #channel tiles are separated by #lines */
     border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* #4 active #channel is #highlighted */
@@ -62,7 +96,11 @@ li.selected {
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
+    
+    
 }
+
+
 
 /* TAB BAR */
 
@@ -72,7 +110,15 @@ li img {
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    clear: both;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    margin-top:auto;
+    width: 40%;
 }
+
+
 
 /* #4 add styles to #tab-bar #buttons */
 #tab-bar button {
@@ -84,6 +130,9 @@ li img {
     width: 33%;
     height: 72px;
     padding: 16px;
+    flex: 1 100%;
+    position: relative;
+    
 }
 
 /* #4 #tab-bar buttons do have a #line-break and images are centered due to the left&right auto margin */
@@ -104,7 +153,7 @@ li img {
 .message {
     /* #3 #chat #width*/
     width: 80%;
-
+    height: 100%;
     /* #4 align all #messages using #margins */
     margin-left: 2.5%;
 
@@ -129,13 +178,17 @@ li img {
 
 .message p {
     background-color: white;
-    padding: 16px;
+    padding:  16px;
 }
 
 .message button {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    float: right;
+    margin-right: -8px;
+    margin-bottom: -8px;
+
 }
 
 /* #4 left align own #messages using #margins */
@@ -143,3 +196,60 @@ li img {
     margin-left: 17.5%;
 }
 
+.message h3{
+    display: flex;
+    justify-content: space-between;
+}
+
+#chat {
+    float: right;
+    width: 60%;
+    right: 0px;
+    -webkit-align-self: center; 
+    align-self: center;
+    /*position: fixed;*/
+    position: fixed;
+    overflow-y: auto;
+}
+
+#chat h1 {
+    display: flex;
+   align-items: center;
+}
+
+#chat h1 img {
+    position: absolute;
+    right:16px;
+}
+
+#chat-bar{
+    background-color: white;
+    /* #3 #tab-bar #container has all buttons centered */
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    margin-top:auto;
+    width: 60%;
+    height: 72px;
+    
+}
+
+#emojis{
+    position: inherit;
+    border: 1px solid black;
+    top: 284px;
+    margin-left: 1.5%;
+    padding: 16px;
+    background-color: white;
+    font-size: 28px;
+    text-align: left;
+    overflow-y: auto;
+    height: 280px;
+    width: 280px;
+}
+#chat-bar img{
+    position: absolute;
+    top: 25%;
+    margin-left: 2.5%;
+    border: none;
+}
